@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1069050682106",
+    "project_id": "lendsqr-fp-news-9a524",
+    "storage_bucket": "lendsqr-fp-news-9a524.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069050682106:android:47bc158eb64c344ec18743",
+        "android_client_info": {
+          "package_name": "com.fpnews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069050682106-mthmvjsg0sprjbltusdqo6jkdpc69774.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu8KC6sXWwIGs66FN9lEcl6AJf1hgjITc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069050682106-mthmvjsg0sprjbltusdqo6jkdpc69774.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

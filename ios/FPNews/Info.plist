@@ -24,6 +24,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>CodePushDeploymentKey</key>
+	<string>Nif7QBE0xNTScN9lS9UtJsKyVCIr5SKYvvZIl</string>
+	<key>AppSecret</key>
+    <string>5f73fc80-2c84-4b01-83f1-f149595efa67</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>

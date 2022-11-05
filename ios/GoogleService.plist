@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1069050682106-914v1u807icb3butmrp4clku4n2ri03h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1069050682106-914v1u807icb3butmrp4clku4n2ri03h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDm_QtMJZZ1D4eyz8JVThFW2mZJFKIPwT8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1069050682106</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.FPNews</string>
+	<key>PROJECT_ID</key>
+	<string>lendsqr-fp-news-9a524</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lendsqr-fp-news-9a524.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1069050682106:ios:3841f7714f6eb79fc18743</string>
+</dict>
+</plist>
