@@ -12,6 +12,7 @@ import Home from '../screens/users/home/home';
 import { useEffect } from 'react';
 import { getUser } from '../storage/local/storage';
 import { updateLoggedIn } from '../storage/redux/action/action';
+import Details from '../screens/users/news/details';
 
 const Stack = createStackNavigator();
 
@@ -58,6 +59,7 @@ export default function MainStack() {
                     <Stack.Screen name={ROUTE.LOGIN} component={Login}/>
                     <Stack.Screen name={ROUTE.SIGNUP} component={Register}/>
                     <Stack.Screen name={ROUTE.HOME} component={Home}/>
+                    <Stack.Screen name={ROUTE.DETAILS} component={Details}/>
                 </Stack.Navigator>
             </NavigationContainer>
         </>

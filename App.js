@@ -7,6 +7,7 @@ import {Provider as ReduxProvider, useSelector} from 'react-redux'
 import { Store } from './src/storage/redux/store';
 import MainStack from './src/navigations/mainStack';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import Toast from 'react-native-toast-message'
 
 GoogleSignin.configure();
 
@@ -28,6 +29,7 @@ const App = () => {
   return (
     <PaperProvider>
       <ReduxProvider store={Store}>
+        <Toast />
         <MainStack />
       </ReduxProvider>
     </PaperProvider>

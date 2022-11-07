@@ -1,5 +1,5 @@
 import { setUser } from "../../local/storage"
-import { SET_LOADING, IS_LOGGED_IN } from "./actionTypes"
+import { SET_LOADING, IS_LOGGED_IN, NEWS } from "./actionTypes"
 
 export const updateAppLoader = (bool, dispatch)=>{
     dispatch({
@@ -16,5 +16,13 @@ export const updateLoggedIn = (bool, data, dispatch)=>{
             status: bool,
             data
         }
+    })    
+}
+
+export const updateNewsState = (data, dispatch)=>{
+    setUser(data);
+    dispatch({
+        type: NEWS,
+        payLoad: data
     })    
 }

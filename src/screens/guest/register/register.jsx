@@ -9,6 +9,7 @@ import { googleCall } from '../../../function/googleSignin'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAppLoader, updateLoggedIn } from '../../../storage/redux/action/action'
 import { updateUser } from '../../../function/firebaseAction'
+import Toast from 'react-native-toast-message'
 
 export default function Register({navigation}) {
     const [inputData, setInputData] = useState({
@@ -45,6 +46,11 @@ export default function Register({navigation}) {
 
         updateLoggedIn(true, _res, dispatch)
         updateAppLoader(false, dispatch);
+
+        Toast.show({
+            type: 'success',
+            text1: "success"
+        })
     }
     return (
         <View style={styles.container}>
