@@ -8,6 +8,9 @@ import { Store } from './src/storage/redux/store';
 import MainStack from './src/navigations/mainStack';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import Toast from 'react-native-toast-message'
+// import Async from '@react-native-async-storage/async-storage'
+
+// Async.clear();
 
 GoogleSignin.configure();
 

@@ -20,7 +20,6 @@ export const updateLoggedIn = (bool, data, dispatch)=>{
 }
 
 export const updateNewsState = (data, dispatch)=>{
-    setUser(data);
     dispatch({
         type: NEWS,
         payLoad: data

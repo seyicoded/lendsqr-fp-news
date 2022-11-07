@@ -25,12 +25,12 @@ export default function MainStack() {
 
     useEffect(()=>{
         (async()=>{
-            const _res = await getUser()
+            const __res = await getUser()
             
-            console.log("reac", _res)
-            if(_res.status){
+            console.log("reached signed in", __res)
+            if(__res.status == true){
                 setisSigned(true)
-                updateLoggedIn(true, _res.data, dispatch)
+                updateLoggedIn(true, __res.data, dispatch)
                 setTimeout(()=>{
                     setFetchedFromStore(true)
                 }, 1000)
