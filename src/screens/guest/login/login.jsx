@@ -1,16 +1,58 @@
 import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import COLOR from '../../../constant/color'
 import { Button } from 'react-native-paper'
 import ROUTE from '../../../constant/route'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { googleCall } from '../../../function/googleSignin'
+import { updateAppLoader, updateLoggedIn } from '../../../storage/redux/action/action'
+import { updateUser } from '../../../function/firebaseAction'
 
 export default function Login({navigation}) {
+    const [inputData, setInputData] = useState({
+        email: "",
+        fullName: "",
+        phoneNumber: ""
+    })
+    const selector = useSelector(state => state)
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        if(selector.isLoggedIn){
+            navigation.replace(ROUTE.HOME)
+        }
+    }, [selector.isLoggedIn])
+
+    const handleLogin = async ()=>{
+        const _res = await googleCall()
+        console.log(_res)
+
+        if(_res !== null){
+            processLogin(_res.user.email, `${_res.user.familyName} ${_res.user.givenName}`)
+        }
+    }
+
+    const processLogin = async (_email = inputData.email, _fullName = inputData.fullName)=>{
+        updateAppLoader(true, dispatch);
+        
+        const _res = {
+            email: _email,
+            fullName: _fullName,
+            phoneNumber: inputData.phoneNumber
+        }
+        await updateUser(_res)
+
+        updateLoggedIn(true, _res, dispatch)
+        updateAppLoader(false, dispatch);
+    }
+
     return (
         <View style={styles.container}>
             <Text style={styles.login}>Lendsqr{'\n'}Login</Text>
             
             <View style={{ marginTop: 15 }}>
-                <Button color='blue' mode='contained'>Sign In with Google</Button>
+                <Button onPress={()=> handleLogin()} color='darkblue' mode='contained'>Sign In with Google</Button>
                 <Text style={{ textAlign: 'center', marginVertical: 10 }}>OR</Text>
                 <Button onPress={()=> navigation.navigate(ROUTE.SIGNUP)} color='black' mode='outlined'>Register</Button>
             </View>

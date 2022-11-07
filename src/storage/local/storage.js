@@ -16,3 +16,12 @@ export const getUser = async ()=>{
         }
     }
 }
+
+export const setUser = async (data)=>{
+    const _res = await AsyncStorage.setItem(CONFIG.STORAGE.USER, JSON.stringify(data));
+
+    return {
+        status: true,
+        data: null
+    }
+}
