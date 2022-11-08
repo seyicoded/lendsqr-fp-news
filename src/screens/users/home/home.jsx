@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   itemImage: {
     width: 120,
-    height: 120,
+    height: 130,
     marginRight: 4
   },
   itemTitle: {
