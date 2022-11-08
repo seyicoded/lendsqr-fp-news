@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
     // },
     // shadowOpacity: 0.25,
     // shadowRadius: 3.84,
-    elevation: 5,
-    borderWidth: 1,
+    // elevation: 5,
+    borderWidth: 0.5,
     borderColor: 'rgba(0, 0, 0, 0.43)',
     borderRadius: 4,
     backgroundColor: 'white'
