@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import COLOR from '../../../constant/color'
 import { Button, TextInput } from 'react-native-paper'
 import ROUTE from '../../../constant/route'
