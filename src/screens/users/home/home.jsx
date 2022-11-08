@@ -59,7 +59,7 @@ export default function Home({navigation}) {
                       </View>
                       <Text style={styles.datePub}>
                         Published On: 
-                        {moment(item.published_date).format("LLL")}
+                        {moment(item.published_date).format("LL")}
                         {/* {(new Date(item.published_date)).toDateString()} */}
                       </Text>
                     </View>
