@@ -5,9 +5,10 @@ import { fetchNewsApiCaller } from '../../../api'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateNewsState } from '../../../storage/redux/action/action'
 import { Image } from 'react-native-elements'
-import { ActivityIndicator } from 'react-native-paper'
+import { ActivityIndicator, Button } from 'react-native-paper'
 import ROUTE from '../../../constant/route'
 import moment from 'moment'
+import crashlytics from '@react-native-firebase/crashlytics';
 
 export default function Home({navigation}) {
   const [iseFetch, setIseFetch] = useState(false)
@@ -29,7 +30,17 @@ export default function Home({navigation}) {
   }, [])
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Lendsqr News</Text>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          <Text style={styles.title}>Lendsqr News</Text>
+          <Button onPress={()=>{
+            let a = 0 / 5;
+            a = 5 / 0;
+            (0 / 5)
+            (5 / 0)
+            crashlytics().crash()
+          }}>ERROR NOW</Button>
+        </View>
+        
         <View>
           {
             (!iseFetch && (
