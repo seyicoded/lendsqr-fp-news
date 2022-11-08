@@ -27,7 +27,7 @@ export default function Login({navigation}) {
 
     const handleLogin = async ()=>{
         const _res = await googleCall()
-        console.log(_res)
+        console.log(_res, ": as user info")
 
         if(_res !== null){
             processLogin(_res.user.email, `${_res.user.familyName} ${_res.user.givenName}`)

@@ -7,6 +7,7 @@ import { updateNewsState } from '../../../storage/redux/action/action'
 import { Image } from 'react-native-elements'
 import { ActivityIndicator } from 'react-native-paper'
 import ROUTE from '../../../constant/route'
+import moment from 'moment'
 
 export default function Home({navigation}) {
   const [iseFetch, setIseFetch] = useState(false)
@@ -56,7 +57,11 @@ export default function Home({navigation}) {
                         <Text style={styles.itemTitle}>{item.title}</Text>
                         <Text style={styles.topic}>{item.topic}</Text>
                       </View>
-                      <Text style={styles.datePub}>Published On: {(new Date(item.published_date)).toDateString()}</Text>
+                      <Text style={styles.datePub}>
+                        Published On: 
+                        {moment(item.published_date).format("LLL")}
+                        {/* {(new Date(item.published_date)).toDateString()} */}
+                      </Text>
                     </View>
                   </View>
                 </TouchableOpacity>
@@ -100,7 +105,8 @@ const styles = StyleSheet.create({
     elevation: 5,
     borderWidth: 1,
     borderColor: 'rgba(0, 0, 0, 0.43)',
-    borderRadius: 4
+    borderRadius: 4,
+    backgroundColor: 'white'
   },
   itemImage: {
     width: 120,

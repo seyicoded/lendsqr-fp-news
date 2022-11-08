@@ -14,6 +14,7 @@ export const fetchNewsApiCaller = async ()=>{
             message: "News Fetched",
         }
     }catch(error){
+        console.log(error)
         logFCrashError(error);
         return {
             status: false,
