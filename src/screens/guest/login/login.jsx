@@ -31,6 +31,8 @@ export default function Login({navigation}) {
 
         if(_res !== null){
             processLogin(_res.user.email, `${_res.user.familyName} ${_res.user.givenName}`)
+        }else{
+            // processLogin(_res.user.email, `${_res.user.familyName} ${_res.user.givenName}`)
         }
     }
 
